@@ -75,6 +75,7 @@
 		} else if (kCSSTester.test(val)) {
 			appendCSS(val);
 		}
+		hideDialog();
 	}
 	
 	//--------------------------------------------------
@@ -86,7 +87,7 @@
 	    s.type = 'text/javascript';
 		if(onloadCallback)
 	    	s.onload=onloadCallback;
-	    s.src = kJQueryURL;
+	    s.src = script;
 	    document.body.appendChild(s);
 	}
 	

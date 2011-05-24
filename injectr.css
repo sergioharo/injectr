@@ -10,12 +10,13 @@
 }
 
 .injectr-dlg {
-	position: absolute;
-	top: 0;
 	width: 360px;
 	margin: 0 auto;
 	background-color: white;
 	height: 80px;
+	padding: 1em;
+	font-size: 16px;
+	border-radius: 0 0 1em 1em;
 }
 
 #injectr-txt {
