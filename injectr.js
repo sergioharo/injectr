@@ -1,5 +1,5 @@
 (function(){
-	var kCSSURL = '';
+	var kCSSURL = 'https://github.com/sergioharo/injectr/raw/master/injectr.css';
 	var kJQueryURL = 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js';
 	var kJSTester = /(\.js)$/i;
 	var kCSSTester = /(\.css)$/i;
@@ -24,10 +24,15 @@
 			return true;
 		}
 		
+		// add jquery script to page if needed
 		if (typeof jQuery == 'undefined') {
 		    appendScript(kJQueryURL, injectr);
 		} else {
+			// add injectr css
 			appendCSS(kCSSURL);
+			// adding function to global namespace
+			window["injectr"] = injectr;
+			// make sure we never re-execute this again
 		    gInit = true;
 		}
 		
