@@ -1,5 +1,5 @@
 (function(){
-	if(injectr) {
+	if(typeof injectr != "undefined") {
 		injectr();
 	} else {
 		var s = document.createElement('script');
