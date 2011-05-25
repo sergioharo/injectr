@@ -1,58 +1,138 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset='utf-8'>
-
-  <title>sergioharo/injectr @ GitHub</title>
-
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #1acd57;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #ffffff;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #e532a8; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #e532a8; }
-    h3 { text-align: center; color: #e532a8; }
-    a { color: #e532a8; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
+	<meta charset='utf-8' />
+	<title>sergioharo/injectr @ GitHub</title>
+	<style type="text/css">
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+body {
+	background-color: ghostWhite;
+	font-family: Helvetica, Arial, san-serif;
+	color: #333;
+}
+#banner {
+	position: absolute; 
+	top: 0; 
+	right: 0; 
+	border: 0;
+}
+#container {
+	margin: 0 auto;
+	width: 700px;
+	background-color: #FFF;
+	padding: 1em;
+	box-shadow: 0px 0px 1em #AAA;
+}
+h1 {
+	font-size: 3.8em;
+	color: #222;
+	margin-bottom: 3px;
+	margin-top: 3px;
+}
+h1 .small {
+	font-size: 0.4em;
+}
+h1 a {
+	text-decoration: none
+}
+h2 {
+	font-size: 1.5em;
+	color: #222;
+}
+h3 {
+	text-align: center;
+	color: #222;
+}
+a {
+	color: #4183C4;
+}
+a.bookmarklet {
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	border: 1px solid #B6B6B6;
+	font-weight: normal;
+	color: #4F4F4F;
+	font-size: 1.1em;
+	display: inline-block;
+	position: relative;
+	padding: 0;
+	margin-right: .1em;
+	text-decoration: none !important;
+	cursor: pointer;
+	text-align: center;
+	zoom: 1;
+	overflow: visible;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	-webkit-transition: -webkit-box-shadow 0.25s ease-in-out;
+	-moz-transition: -moz-box-shadow 0.25s ease-in-out;
+	-o-transition: -o-box-shadow 0.25s ease-in-out;
+	line-height: 1.4;
+	font-weight: bold;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+	padding: .4em 1em;
+	background: #C4C4C4;
+	background: -webkit-gradient( linear, left bottom, left top, color-stop(1, #EDEDED), color-stop(0, #C4C4C4) );
+	background: -moz-linear-gradient( center top, #EDEDED, #C4C4C4 );
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset;
+	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset;
+	
+	
+}
+.description {
+	font-size: 1.2em;
+	margin-bottom: 30px;
+	margin-top: 30px;
+	font-style: italic;
+}
+pre {
+	background: #000;
+	color: #fff;
+	padding: 15px;
+}
+hr {
+	border: 0;
+	width: 80%;
+	border-bottom: 1px solid #aaa
+}
+.footer {
+	text-align: center;
+	padding-top: 30px;
+	font-style: italic;
+}
+	</style>
 </head>
-
 <body>
-  <a href="http://github.com/sergioharo/injectr"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+  <a id="banner" href="http://github.com/sergioharo/injectr">
+	<img src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
 
   <div id="container">
-
-    <div class="download">
-      <a href="http://github.com/sergioharo/injectr/zipball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-      <a href="http://github.com/sergioharo/injectr/tarball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
-    </div>
-
-    <h1><a href="http://github.com/sergioharo/injectr">injectr</a>
-      <span class="small">by <a href="http://github.com/sergioharo">sergioharo</a></span></h1>
+	
+    <h1><a href="http://github.com/sergioharo/injectr">injectr</a></h1>
 
     <div class="description">
       Cross-browser bookmarklet to inject javascript and css into any page
     </div>
-
+	
+<h2>Usage</h2>
+<p>Drag the following link to your browsers bookmark toolbar:
+<br /><br />
+<a class="bookmarklet" href="javascript:(function(){if(typeof injectr != 'undefined')injectr();else{var a=document.createElement('script');a.type='text/javascript';a.src='https://github.com/sergioharo/injectr/raw/master/injectr.js';document.body.appendChild(a)}})();">Injectr Bookmark</a>
+<br/>    </p>
     <h2>Authors</h2>
-<p>Sergio Haro (sergio.haro.jr@gmail.com)<br/><br/>      </p>
+<p>Sergio Haro (sergio.haro.jr@gmail.com)
+<br/>    </p>
 <h2>Contact</h2>
-<p>Sergio Haro (sergio.haro.jr@gmail.com)<br/>      </p>
+<p>Sergio Haro (sergio.haro.jr@gmail.com)
+<br/>      </p>
 
 
     <h2>Download</h2>
@@ -66,12 +146,9 @@
       <pre>$ git clone git://github.com/sergioharo/injectr</pre>
     </p>
 
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/sergioharo/injectr">sergioharo/injectr</a>
+    <div class="footer">get the source code on GitHub : <a href="http://github.com/sergioharo/injectr">sergioharo/injectr</a>
     </div>
 
   </div>
-
-  
 </body>
 </html>
